@@ -4,6 +4,10 @@ const container = document.getElementById("grid");
 function createGrid(){
     let gridSize = prompt("Enter a grid size:");
 
+    while (container.firstChild){
+        container.removeChild(container.lastChild);
+    }
+
     for (let y = 0; y < gridSize; y++){
         let row = document.createElement("div");
         row.className = "row"
