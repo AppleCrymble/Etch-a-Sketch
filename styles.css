@@ -1,1 +1,20 @@
 html, body {margin: 0; padding: 0}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50vh;
+}
+
+.row{
+    display: flex;
+    flex-grow: 1;
+    width: 50vh;
+}
+
+.square{
+    box-sizing: border-box;
+    border: 0.1px solid black;
+    flex-grow: 1;
+}
