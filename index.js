@@ -4,6 +4,11 @@ const container = document.getElementById("grid");
 function createGrid(){
     let gridSize = prompt("Enter a grid size:");
 
+    if (gridSize > 100){
+        alert("Grid size must be lower than 100");
+        return;
+    }
+
     while (container.firstChild){
         container.removeChild(container.lastChild);
     }
