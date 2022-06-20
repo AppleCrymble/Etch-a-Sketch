@@ -1,7 +1,9 @@
 
-const container = document.getElementById("container");
+const container = document.getElementById("grid");
 
-function createGrid(gridSize){
+function createGrid(){
+    let gridSize = prompt("Enter a grid size:");
+
     for (let y = 0; y < gridSize; y++){
         let row = document.createElement("div");
         row.className = "row"
@@ -25,10 +27,11 @@ function createGrid(gridSize){
                 square.style.borderBottomWidth = "0.05em";
             }
 
+            square.addEventListener("mouseover", () =>{
+                square.style.backgroundColor = "black";
+            });
 
             row.appendChild(square);
         }
     }
 }
-
-createGrid(16)
